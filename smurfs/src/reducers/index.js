@@ -1,4 +1,4 @@
-import {ADD_SMURF, START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE} from '../actions';
+import {START_POSTING, POST_SUCCESS, POST_FAILURE, START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE} from '../actions';
 
 const initialState = {
     smurfData: [],
@@ -8,10 +8,11 @@ const initialState = {
 
 export const reducer = (state=initialState, action) => {
     switch(action.type) {
-        case ADD_SMURF:
+        case POST_SUCCESS:
             return {
                 ...state,
-                smurfData: [...state.smurfData, action.payload]
+                smurfData: action.payload,
+                error: ''
             }
         case START_FETCHING:
             return {
@@ -22,7 +23,7 @@ export const reducer = (state=initialState, action) => {
         case FETCH_SUCCESS:
             return {
                 ...state,
-                smurfData: [...state.smurfData, action.payload],
+                smurfData: action.payload,
                 isFetching: false,
                 error: ''
             }

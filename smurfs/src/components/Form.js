@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {connect} from 'react-redux';
+import {addSmurf} from '../actions';
 
 
 
@@ -16,6 +18,12 @@ const Form = (props) => {
 
     const submitHandler = e => {
         e.preventDefault();
+        props.addSmurf(formData);
+        setFormData({
+            name: '',
+            age: '',
+            height: ''
+        })
     }
     
     return (
@@ -67,5 +75,10 @@ const Form = (props) => {
     );
 };
 
-
-export default Form;
+const mapStateToProps = state => {
+    return {
+        smurfData: state.smurfData,
+        error: state.error
+    }
+}
+export default connect(mapStateToProps, {addSmurf})(Form);
