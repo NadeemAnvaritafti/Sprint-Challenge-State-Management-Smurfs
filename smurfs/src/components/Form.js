@@ -28,45 +28,38 @@ const Form = (props) => {
     
     return (
         <div className='container'>
-            <h2 className='title'>Add Smurf</h2>
+            <h2 className='title'>Add Smurf to Database</h2>
             <form className='form' onSubmit={submitHandler}>
-
-                <label className='label'>Name: 
                 <input 
                     className='input' 
-                    type='text' 
+                    type='text'
+                    id='name' 
                     name='name' 
                     placeholder='Name' 
                     onChange={changeHandler} 
                     value={formData.name} 
                     required 
                 />
-                </label>
-
-                <label className='label'>Age:
                 <input 
                     className='input' 
-                    type='number' 
+                    type='number'
+                    id='age' 
                     name='age' 
                     placeholder='Age' 
                     onChange={changeHandler} 
                     value={formData.age} 
                     required 
                 />
-                </label>
-                
-                <label className='label'>Height:
                 <input 
                     className='input' 
-                    type='text' 
+                    type='text'
+                    id='height' 
                     name='height' 
                     placeholder='Height' 
                     onChange={changeHandler} 
                     value={formData.height} 
                     required 
                 />
-                </label>
-              
                 <div>
                 <button className='button' type='submit'>Add Smurf</button>
                 </div>

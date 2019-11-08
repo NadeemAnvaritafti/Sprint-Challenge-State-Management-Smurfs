@@ -16,7 +16,7 @@ const List = props => {
     }
 
     return (
-        <div className='nbalist'>
+        <div className='smurfList'>
             {props.error && <p>{props.error}</p>}
             {props.smurfData.map(smurf => (
                 <Card key={smurf.id} smurf={smurf}/>

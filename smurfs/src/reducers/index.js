@@ -1,4 +1,4 @@
-import {START_POSTING, POST_SUCCESS, POST_FAILURE, START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE} from '../actions';
+import { POST_SUCCESS, START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE} from '../actions';
 
 const initialState = {
     smurfData: [],

@@ -2,27 +2,71 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.smurfList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.smurfCard {
+  border: 5px solid white;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background: #4560A8;
+  width: 25%;
+  margin: 2%;
+}
+
+.smurfName {
+  color: #00B4E2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.container h2 {
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
-.App-intro {
-  font-size: large;
+.input {
+  background: #A5D5F2;
+  color: black;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  margin: 2%;
+  padding: 3%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.input::placeholder {
+  font-size: 0.9rem;
+}
+
+button {
+  border: 2px solid #0062A8;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 15px;
+  color: #0062A8;
+  background: white;
+  margin: 2%;
+  padding: 3%;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #0062A8;
+  border: 2px solid white;
+  color: white;
 }
